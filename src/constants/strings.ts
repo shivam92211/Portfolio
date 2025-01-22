@@ -1,7 +1,7 @@
 class Strings {
-  static telegram = "Telegram";
-  static telegramLink = "https://telegram.me/nixrajput";
-  static telegramUsername = "nixrajput";
+  static whatsapp = "Whatsapp";
+  static whatsappLink = "https://wa.me/+919137181416";
+  static whatsappUsername = "shivam";
 
   static github = "GitHub";
   static githubLink = "https://www.github.com/shivam92211";
@@ -11,9 +11,9 @@ class Strings {
   static linkedInLink = "https://www.linkedin.com/in/shivam92211";
   static linkedInUsername = "shivam92211";
 
-  static instagram = "Instagram";
-  static instagramLink = "https://www.instagram.com/nixrajput";
-  static instagramUsername = "nixrajput";
+  static blog = "Blogs";
+  static blogLink = "https://shivam-vishwakarma.hashnode.dev/";
+  static blogUsername = "shivam-vishwakarma";
 
   static twitter = "Twitter";
   static twitterLink = "https://www.twitter.com/Shivam_92211";
@@ -23,16 +23,8 @@ class Strings {
   static primaryEmailLink = "mailto:shivm92211@gmail.com";
   static primaryEmail = "shivm92211@gmail.com";
 
-  static buyMeACoffee = "BuyMeACoffee";
-  static buyMeACoffeeLink = "https://buymeacoffee.com/nixrajput";
-  static buyMeACoffeeUsername = "nixrajput";
-
-  static koFi = "Ko-Fi";
-  static koFiLink = "https://ko-fi.com/nixrajput";
-  static koFiUsername = "nixrajput";
-
-  static fullName = "Nikhil Rajput";
-  static shortName = "nixrajput";
+  static fullName = "Shivam Vishwakarma";
+  static shortName = "shivam";
 }
 
 export default Strings;
