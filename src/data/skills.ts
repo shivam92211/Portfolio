@@ -2,7 +2,7 @@ import { ISkillListItem, SkillLevel } from "@/types";
 
 const skills: ISkillListItem[] = [
   {
-    title: "Programming Languages",
+    title: "Languages",
     items: [
       {
         title: "JavaScript",
@@ -15,9 +15,159 @@ const skills: ISkillListItem[] = [
         icon: "/skills/typescript.svg",
       },
       {
-        title: "Dart",
+        title: "Python",
         level: SkillLevel.Expert,
-        icon: "/skills/dart.svg",
+        icon: "/myicons/python.png",
+      },
+      {
+        title: "Sql",
+        level: SkillLevel.Expert,
+        icon: "/myicons/sql.png",
+      },
+    ],
+  },
+  {
+    title: "Data Science Libraries",
+    items: [
+      {
+        title: "Pandas",
+        level: SkillLevel.Expert,
+        icon: "/myicons/pandas.png",
+      },
+      {
+        title: "Numpy",
+        level: SkillLevel.Expert,
+        icon: "/myicons/numpy.png",
+      },
+      {
+        title: "Matplotlib",
+        level: SkillLevel.Expert,
+        icon: "/myicons/matplotlib.png",
+      },
+      {
+        title: "Sci-kit Learn",
+        level: SkillLevel.Expert,
+        icon: "/myicons/scikit-learn.png",
+      },
+    ],
+  },
+  {
+    title: "Machine Learning",
+    items: [
+      {
+        title: "Regression",
+        level: SkillLevel.Expert,
+        icon: "/mylist/regression.png",
+      },
+      {
+        title: "Classification",
+        level: SkillLevel.Expert,
+        icon: "/mylist/classification.png",
+      },
+      {
+        title: "Clustering",
+        level: SkillLevel.Expert,
+        icon: "/mylist/clustering.png",
+      },
+      {
+        title: "Feature Engineering",
+        level: SkillLevel.Expert,
+        icon: "/mylist/features.png",
+      },
+    ],
+  },
+  {
+    title: "Deep Learning",
+    items: [
+      {
+        title: "Neural Networks",
+        level: SkillLevel.Expert,
+        icon: "/mylist/neural.png",
+      },
+      {
+        title: "Tensorflow",
+        level: SkillLevel.Expert,
+        icon: "/myicons/tensorflow.png",
+      },
+      {
+        title: "PyTorch",
+        level: SkillLevel.Expert,
+        icon: "/myicons/pytorch.png",
+      },
+      {
+        title: "Transfer Learning",
+        level: SkillLevel.Expert,
+        icon: "/mylist/transfer.png",
+      },
+    ],
+  },
+  {
+    title: "Generative AI",
+    items: [
+      {
+        title: "Langchain",
+        level: SkillLevel.Expert,
+        icon: "/myicons/langchain.png",
+      },
+      {
+        title: "Llamaindex",
+        level: SkillLevel.Expert,
+        icon: "/mylist/llamaindex.png",
+      },
+      {
+        title: "HuggingFace",
+        level: SkillLevel.Expert,
+        icon: "/myicons/hugging.png",
+      },
+      {
+        title: "RAG",
+        level: SkillLevel.Expert,
+        icon: "/mylist/rag.png",
+      },
+    ],
+  },
+  {
+    title: "Computer Vision",
+    items: [
+      {
+        title: "OpenCV",
+        level: SkillLevel.Expert,
+        icon: "/mylist/opencv.png",
+      },
+      {
+        title: "Convolutional Neural Networks",
+        level: SkillLevel.Expert,
+        icon: "/mylist/cnn.png",
+      },
+      {
+        title: "Yolo",
+        level: SkillLevel.Expert,
+        icon: "/mylist/yolo.png",
+      },
+    ],
+  },
+  {
+    title: "Natural Language Processing",
+    items: [
+      {
+        title: "NLTK",
+        level: SkillLevel.Expert,
+        icon: "/mylist/nltk.png",
+      },
+      {
+        title: "RNN/LSTM",
+        level: SkillLevel.Expert,
+        icon: "/mylist/rnn.png",
+      },
+      {
+        title: "Transformer",
+        level: SkillLevel.Expert,
+        icon: "/mylist/transformer.png",
+      },
+      {
+        title: "Encoder-Decoder",
+        level: SkillLevel.Expert,
+        icon: "/mylist/encoder.png",
       },
     ],
   },
@@ -44,16 +194,6 @@ const skills: ISkillListItem[] = [
         level: SkillLevel.Intermediate,
         icon: "/skills/css.svg",
       },
-      {
-        title: "SASS",
-        level: SkillLevel.Intermediate,
-        icon: "/skills/sass.svg",
-      },
-      {
-        title: "Redux Toolkit",
-        level: SkillLevel.Expert,
-        icon: "/skills/redux.svg",
-      },
     ],
   },
   {
@@ -65,37 +205,23 @@ const skills: ISkillListItem[] = [
         icon: "/skills/nodejs.svg",
       },
       {
-        title: "Express.js",
+        title: "Django",
         level: SkillLevel.Expert,
-        icon: "/skills/express.svg",
+        icon: "/myicons/django.png",
       },
       {
-        title: "Socket.io",
+        title: "FastAPI",
         level: SkillLevel.Intermediate,
-        icon: "/skills/socket-io.png",
-      },
-      // {
-      //   title: "Nest.js",
-      //   level: SkillLevel.Beginner,
-      //   icon: "/skills/nestjs.svg",
-      // },
-    ],
-  },
-  {
-    title: "Mobile App Development",
-    items: [
-      {
-        title: "Flutter",
-        level: SkillLevel.Expert,
-        icon: "/skills/flutter.svg",
+        icon: "/myicons/FastAPI.png",
       },
       {
-        title: "GetX",
-        level: SkillLevel.Expert,
-        icon: "/skills/getx.png",
+        title: "Flask",
+        level: SkillLevel.Intermediate,
+        icon: "/myicons/flask.svg",
       },
     ],
   },
+  
   {
     title: "Database Management",
     items: [
@@ -117,17 +243,12 @@ const skills: ISkillListItem[] = [
     ],
   },
   {
-    title: "DevOps/VCS",
+    title: "DevOps",
     items: [
       {
         title: "Docker",
         level: SkillLevel.Beginner,
         icon: "/skills/docker.png",
-      },
-      {
-        title: "AWS",
-        level: SkillLevel.Intermediate,
-        icon: "/skills/aws.svg",
       },
       {
         title: "Git",
@@ -144,11 +265,6 @@ const skills: ISkillListItem[] = [
   {
     title: "Miscellaneous",
     items: [
-      {
-        title: "Firebase",
-        level: SkillLevel.Intermediate,
-        icon: "/skills/firebase.svg",
-      },
       {
         title: "Ubuntu",
         level: SkillLevel.Intermediate,
