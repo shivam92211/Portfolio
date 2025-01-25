@@ -72,7 +72,7 @@ const skills: ISkillListItem[] = [
       {
         title: "Feature Engineering",
         level: SkillLevel.Expert,
-        icon: "/mylist/features.png",
+        icon: "/mylist/feature.png",
       },
     ],
   },
@@ -92,7 +92,7 @@ const skills: ISkillListItem[] = [
       {
         title: "PyTorch",
         level: SkillLevel.Expert,
-        icon: "/myicons/pytorch.png",
+        icon: "/myicons/torch.png",
       },
       {
         title: "Transfer Learning",
@@ -127,6 +127,26 @@ const skills: ISkillListItem[] = [
     ],
   },
   {
+    title: "Large Language Models",
+    items: [
+      {
+        title: "Gemini",
+        level: SkillLevel.Expert,
+        icon: "/mylist/gemini.png",
+      },
+      {
+        title: "Chat GPT",
+        level: SkillLevel.Expert,
+        icon: "/myicons/chatgpt.png",
+      },
+      {
+        title: "LLama",
+        level: SkillLevel.Expert,
+        icon: "/mylist/meta.svg",
+      },
+    ],
+  },
+  {
     title: "Computer Vision",
     items: [
       {
@@ -135,7 +155,7 @@ const skills: ISkillListItem[] = [
         icon: "/mylist/opencv.png",
       },
       {
-        title: "Convolutional Neural Networks",
+        title: "CNN",
         level: SkillLevel.Expert,
         icon: "/mylist/cnn.png",
       },
@@ -152,12 +172,12 @@ const skills: ISkillListItem[] = [
       {
         title: "NLTK",
         level: SkillLevel.Expert,
-        icon: "/mylist/nltk.png",
+        icon: "/mylist/nlp.png",
       },
       {
         title: "RNN/LSTM",
         level: SkillLevel.Expert,
-        icon: "/mylist/rnn.png",
+        icon: "/mylist/rnn.webp",
       },
       {
         title: "Transformer",
