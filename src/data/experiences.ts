@@ -5,7 +5,7 @@ const experiences: IExperienceItem[] = [
     designation: "AI ML Engineer",
     company: "Meta Scifor Technologies",
     startDate: "Mar 2024",
-    endDate: "Dec 2024",
+    endDate: "Jan 2024",
     isCurrentJob: false,
     location: "Bengaluru, India (Remote)",
     description: [
