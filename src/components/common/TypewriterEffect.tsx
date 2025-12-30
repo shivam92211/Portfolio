@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { cn } from "@/utils/cn";
 import { motion, stagger, useAnimate, useInView } from "framer-motion";
 
@@ -50,28 +50,33 @@ export const TypewriterEffect = ({
   }, [isInView, animate]);
 
   const renderWords = () => {
-    return (
-      <motion.span ref={scope} className="inline">
-        {wordsArray.map((word, idx) => {
-          return (
-            <span key={`word-${idx}`} className="inline-block">
-              {word.text.map((char, index) => (
-                <motion.span
-                  initial={{}}
-                  key={`char-${index}`}
-                  className={cn(
+    return React.createElement(
+      motion.span as any,
+      {
+        ref: scope,
+        className: "inline",
+      },
+      wordsArray.map((word, idx) => {
+        return (
+          <span key={`word-${idx}`} className="inline-block">
+            {word.text.map((char, index) =>
+              React.createElement(
+                motion.span as any,
+                {
+                  initial: {},
+                  key: `char-${index}`,
+                  className: cn(
                     `dark:text-[var(--textColor)] text-[var(--textColor)] opacity-0 hidden`,
                     word.className
-                  )}
-                >
-                  {char}
-                </motion.span>
-              ))}
-              &nbsp;
-            </span>
-          );
-        })}
-      </motion.span>
+                  ),
+                },
+                char
+              )
+            )}
+            &nbsp;
+          </span>
+        );
+      })
     );
   };
   return (
