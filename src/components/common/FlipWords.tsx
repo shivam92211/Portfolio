@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useCallback, useEffect, useState } from "react";
-import { AnimatePresence, motion, HTMLMotionProps } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/utils/cn";
 
 export const FlipWords = ({
@@ -13,11 +13,6 @@ export const FlipWords = ({
   duration?: number;
   className?: string;
 }) => {
-  // Use explicit HTMLMotionProps types so className and other HTML props are accepted
-  type DivProps = HTMLMotionProps<"div">;
-  type SpanProps = HTMLMotionProps<"span">;
-  const MDiv = motion.div as unknown as React.ComponentType<DivProps>;
-  const MSpan = motion.span as unknown as React.ComponentType<SpanProps>;
   const [currentWord, setCurrentWord] = useState(words[0]);
   const [isAnimating, setIsAnimating] = useState<boolean>(false);
 
@@ -40,7 +35,7 @@ export const FlipWords = ({
         setIsAnimating(false);
       }}
     >
-      <MDiv
+      <motion.div
         initial={{
           opacity: 0,
           y: 10,
@@ -71,7 +66,7 @@ export const FlipWords = ({
         key={currentWord}
       >
         {currentWord.split(/(?<=\s)/).map((letter, index) => (
-          <MSpan
+          <motion.span
             key={currentWord + index}
             initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -82,9 +77,9 @@ export const FlipWords = ({
             className="inline-block mr-2"
           >
             {letter}
-          </MSpan>
+          </motion.span>
         ))}
-      </MDiv>
+      </motion.div>
     </AnimatePresence>
   );
 };
