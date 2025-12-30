@@ -170,7 +170,7 @@ const Sparkles = () => {
       opacity: Math.random(),
       duration: Math.random() * 2 + 4,
     }));
-  }, [mounted]);
+  }, []);
 
   if (!mounted) {
     return <div className="absolute inset-0" />;
