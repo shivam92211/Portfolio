@@ -21,7 +21,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   }, [ref]);
 
   const { scrollYProgress } = useScroll({
-    target: containerRef,
+    target: containerRef as React.RefObject<HTMLElement>,
     offset: ["start 10%", "end 50%"],
   });
 
