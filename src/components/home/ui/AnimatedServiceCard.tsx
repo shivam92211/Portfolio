@@ -1,7 +1,7 @@
 "use client";
 
 import { animate, motion } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { cn } from "@/utils/cn";
 import { IServiceItem } from "@/types";
 import Image from "next/image";
@@ -153,29 +153,49 @@ const IconSkeleton = ({ item }: Readonly<{ item: IServiceItem }>) => {
 };
 
 const Sparkles = () => {
-  const randomMove = () => Math.random() * 2 - 1;
-  const randomOpacity = () => Math.random();
-  const random = () => Math.random();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const sparkles = useMemo(() => {
+    return [...Array(12)].map(() => ({
+      top: Math.random() * 100,
+      left: Math.random() * 100,
+      animateTop: Math.random() * 100,
+      animateLeft: Math.random() * 100,
+      moveX: Math.random() * 2 - 1,
+      moveY: Math.random() * 2 - 1,
+      opacity: Math.random(),
+      duration: Math.random() * 2 + 4,
+    }));
+  }, [mounted]);
+
+  if (!mounted) {
+    return <div className="absolute inset-0" />;
+  }
+
   return (
     <div className="absolute inset-0">
-      {[...Array(12)].map((_, i) => (
+      {sparkles.map((sparkle, i) => (
         <motion.span
           key={`star-${i}`}
           animate={{
-            top: `calc(${random() * 100}% + ${randomMove()}px)`,
-            left: `calc(${random() * 100}% + ${randomMove()}px)`,
-            opacity: randomOpacity(),
+            top: `calc(${sparkle.animateTop}% + ${sparkle.moveY}px)`,
+            left: `calc(${sparkle.animateLeft}% + ${sparkle.moveX}px)`,
+            opacity: sparkle.opacity,
             scale: [1, 1.2, 0],
           }}
           transition={{
-            duration: random() * 2 + 4,
+            duration: sparkle.duration,
             repeat: Infinity,
             ease: "linear",
           }}
           style={{
             position: "absolute",
-            top: `${random() * 100}%`,
-            left: `${random() * 100}%`,
+            top: `${sparkle.top}%`,
+            left: `${sparkle.left}%`,
             width: `2px`,
             height: `2px`,
             borderRadius: "50%",

@@ -16,11 +16,11 @@ export const navMenus: INavItem[] = [
     link: "/#hero",
     icon: faHome,
   },
-  {
-    name: "About",
-    link: "/#about",
-    icon: faUser,
-  },
+  // {
+  //   name: "About",
+  //   link: "/#about",
+  //   icon: faUser,
+  // },
   {
     name: "Services",
     link: "/#services",

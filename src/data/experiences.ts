@@ -3,9 +3,22 @@ import { IExperienceItem } from "@/types";
 const experiences: IExperienceItem[] = [
   {
     designation: "AI ML Engineer",
+    company: "Aivision21",
+    startDate: "Apr 2025",
+    endDate: "",
+    isCurrentJob: true,
+    location: "Mumbai, India (On-Site)",
+    description: [
+      "Reduced candidate screening time by 40% by developing a computer-vision pipeline that autonomously analyzes facial expressions and sentiment in interview videos.",
+      "Enhanced user engagement by 25% through a “Chat-with-Video” system enabling natural-language queries over uploaded media.",
+      "Led a 2-member team to design and launch a scalable AI-powered LMS platform, accelerating course delivery speed by 3× with automated curriculum generation.",
+    ],
+  },
+  {
+    designation: "AI ML Engineer",
     company: "Meta Scifor Technologies",
     startDate: "Mar 2024",
-    endDate: "Jan 2024",
+    endDate: "Apr 2025",
     isCurrentJob: false,
     location: "Bengaluru, India (Remote)",
     description: [
@@ -17,7 +30,7 @@ const experiences: IExperienceItem[] = [
   {
     designation: "AI ML Engineer Intern",
     company: "Healtether Healthcare Services Pvt Ltd",
-    startDate: "Dec 2023",
+    startDate: "Feb 2023",
     endDate: "Mar 2024",
     isCurrentJob: false,
     location: "Chennai, India (Remote)",
@@ -28,23 +41,9 @@ const experiences: IExperienceItem[] = [
     ],
   },
   {
-    designation: "Software Engineer Intern",
-    company: "Cubicus Technology",
-    startDate: "Jun 2021",
-    endDate: "Nov 2022",
-    isCurrentJob: false,
-    location: "Mumbai, India",
-    description: [
-      "Created the CryptoX application, which provided real-time cryptocurrency information.",
-      "Leading to a 3x reduction in decision-making time for users.",
-      "Implemented web-scraping, data cleaning, and NLP models to deliver accurate insights.",
-      "Increased user engagement time by 45 minutes.",
-    ],
-  },
-  {
     designation: "Math Expert",
     company: "Photomath Inc",
-    startDate: "Aug 2022",
+    startDate: "Nov 2021",
     endDate: "Feb 2023",
     isCurrentJob: false,
     location: "Remote",

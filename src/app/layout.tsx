@@ -80,12 +80,9 @@ export const metadata: Metadata = {
 };
 
 const GoogleAnalytics = dynamic(
-  () => import("@/components/common/GoogleAnalytics"),
-  { ssr: false }
+  () => import("@/components/common/GoogleAnalytics")
 );
-const WebVitals = dynamic(() => import("@/components/common/WebVitals"), {
-  ssr: false,
-});
+const WebVitals = dynamic(() => import("@/components/common/WebVitals"));
 const FloatingNavbar = dynamic(
   () => import("@/components/navbar/FloatingNavbar")
 );

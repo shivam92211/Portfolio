@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Column from "@/components/core/Column";
 import ConstrainedBox from "@/components/core/constrained-box";
@@ -25,9 +26,30 @@ const HomeSection1 = ({ id }: Readonly<{ id: string }>) => {
               className="text-2xl/normal sm:text-3xl/normal md:text-5xl/normal lg:text-6xl/normal xl:text-7xl/normal dark:text-[var(--primaryColor)] text-[var(--primaryColor)] font-bold text-center"
             />
           </div>
-          <p className="text-sm/normal md:text-base/normal dark:text-[var(--textColorLight)] text-[var(--textColorLight)]">
-            Full Stack AI ML Engineer 💻 SDE 🛠️ Open Source 🌍
-          </p>
+
+          <div className="mt-6 w-full flex flex-col items-center md:flex-row md:items-center md:justify-center md:gap-12">
+            <div className="w-40 h-40 md:w-56 md:h-56 relative">
+              <Image
+                src="/photo/Shivam2.png"
+                alt="Shivam"
+                fill
+                className="rounded-full object-cover"
+                priority
+              />
+            </div>
+
+            <p className="mt-6 md:mt-0 md:max-w-xl text-sm/normal md:text-base/normal dark:text-[var(--textColorLight)] text-[var(--textColorLight)] text-center md:text-left">
+              AI/ML Engineer with 3+ years of experience in Machine Learning,
+              Web Development, and Applied AI. Skilled in designing and
+              fine-tuning large language models (LLMs), developing
+              Retrieval-Augmented Generation (RAG) systems, and creating
+              scalable AI agents. Proven ability to enhance operational
+              efficiency, optimize model pipelines, and deliver measurable
+              impact through innovative AI solutions. Passionate about
+              applying advanced AI techniques to solve real-world problems and
+              drive product innovation.
+            </p>
+          </div>
 
           <div className="gap-4 mt-12 lg:mt-16 flex flex-col md:flex-row">
             <TalkButton />
