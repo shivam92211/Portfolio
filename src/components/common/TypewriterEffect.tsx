@@ -88,23 +88,23 @@ export const TypewriterEffect = ({
       style={{ whiteSpace: "nowrap" }}
     >
       {renderWords()}
-      <motion.span
-        initial={{
+      {React.createElement(motion.span as any, {
+        initial: {
           opacity: 0,
-        }}
-        animate={{
+        },
+        animate: {
           opacity: 1,
-        }}
-        transition={{
+        },
+        transition: {
           duration: 0.9,
           repeat: Infinity,
           repeatType: "reverse",
-        }}
-        className={cn(
+        },
+        className: cn(
           "inline-block rounded-sm h-[4px] md:h-[5px] lg:h-[6px] w-4 md:w-6 lg:w-10 bg-[var(--textColor)]",
           cursorClassName
-        )}
-      ></motion.span>
+        ),
+      })}
     </span>
   );
 };
@@ -156,23 +156,23 @@ export const TypewriterEffectSmooth = ({
     );
   };
 
-  return (
-    <motion.span
-      className={cn("relative inline-block overflow-hidden", className)}
-      initial={{ width: "0%" }}
-      animate={{ width: "fit-content" }}
-      transition={{
+  return React.createElement(
+    motion.span as any,
+    {
+      className: cn("relative inline-block overflow-hidden", className),
+      initial: { width: "0%" },
+      animate: { width: "fit-content" },
+      transition: {
         duration: duration || 2,
         ease: "linear",
         delay: delay || 1,
-      }}
+      },
+    },
+    <span
+      className="text-2xl/normal sm:text-3xl/normal md:text-4xl/normal lg:text-5xl/normal xl:text-6xl/normal font-bold text-center"
+      style={{ whiteSpace: "nowrap" }}
     >
-      <span
-        className="text-2xl/normal sm:text-3xl/normal md:text-4xl/normal lg:text-5xl/normal xl:text-6xl/normal font-bold text-center"
-        style={{ whiteSpace: "nowrap" }}
-      >
-        {renderWords()}
-      </span>
-    </motion.span>
+      {renderWords()}
+    </span>
   );
 };
