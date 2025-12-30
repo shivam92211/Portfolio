@@ -1,6 +1,6 @@
   "use client";
 
-import type { MouseEvent } from "react";
+import React, { type MouseEvent } from "react";
 import type { CoreComponentsProps } from "@/types";
 import { motion, useMotionTemplate, useSpring } from "framer-motion";
 
@@ -29,14 +29,16 @@ const CardBox = (props: Readonly<CoreComponentsProps>) => {
     >
       <div className="pointer-events-none absolute">
         <div className="absolute inset-0 z-0 transition duration-1000 [mask-image:linear-gradient(black,transparent)]" />
-        <motion.div
-          className="absolute inset-0 z-10 bg-gradient-to-br opacity-100 via-zinc-100/10 transition duration-1000 group-hover:opacity-50"
-          style={style}
-        />
-        <motion.div
-          className="absolute inset-0 z-10 opacity-0 mix-blend-overlay transition duration-1000 group-hover:opacity-100"
-          style={style}
-        />
+        {React.createElement(motion.div as any, {
+          className:
+            "absolute inset-0 z-10 bg-gradient-to-br opacity-100 via-zinc-100/10 transition duration-1000 group-hover:opacity-50",
+          style: style,
+        })}
+        {React.createElement(motion.div as any, {
+          className:
+            "absolute inset-0 z-10 opacity-0 mix-blend-overlay transition duration-1000 group-hover:opacity-100",
+          style: style,
+        })}
       </div>
       {children}
     </div>
