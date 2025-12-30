@@ -1,7 +1,7 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import React, { useCallback, useEffect, useState } from "react";
+import { AnimatePresence, motion, HTMLMotionProps } from "framer-motion";
 import { cn } from "@/utils/cn";
 
 export const FlipWords = ({
@@ -13,10 +13,11 @@ export const FlipWords = ({
   duration?: number;
   className?: string;
 }) => {
-  // framer-motion typing sometimes narrows motion.* props; use any wrappers
-  // so className and other HTML props are accepted during build.
-  const MDiv: any = motion.div;
-  const MSpan: any = motion.span;
+  // Use explicit HTMLMotionProps types so className and other HTML props are accepted
+  type DivProps = HTMLMotionProps<"div">;
+  type SpanProps = HTMLMotionProps<"span">;
+  const MDiv = motion.div as unknown as React.ComponentType<DivProps>;
+  const MSpan = motion.span as unknown as React.ComponentType<SpanProps>;
   const [currentWord, setCurrentWord] = useState(words[0]);
   const [isAnimating, setIsAnimating] = useState<boolean>(false);
 
