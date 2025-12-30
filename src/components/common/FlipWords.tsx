@@ -13,6 +13,10 @@ export const FlipWords = ({
   duration?: number;
   className?: string;
 }) => {
+  // framer-motion typing sometimes narrows motion.* props; use any wrappers
+  // so className and other HTML props are accepted during build.
+  const MDiv: any = motion.div;
+  const MSpan: any = motion.span;
   const [currentWord, setCurrentWord] = useState(words[0]);
   const [isAnimating, setIsAnimating] = useState<boolean>(false);
 
@@ -35,7 +39,7 @@ export const FlipWords = ({
         setIsAnimating(false);
       }}
     >
-      <motion.div
+      <MDiv
         initial={{
           opacity: 0,
           y: 10,
@@ -66,7 +70,7 @@ export const FlipWords = ({
         key={currentWord}
       >
         {currentWord.split(/(?<=\s)/).map((letter, index) => (
-          <motion.span
+          <MSpan
             key={currentWord + index}
             initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -77,9 +81,9 @@ export const FlipWords = ({
             className="inline-block mr-2"
           >
             {letter}
-          </motion.span>
+          </MSpan>
         ))}
-      </motion.div>
+      </MDiv>
     </AnimatePresence>
   );
 };
