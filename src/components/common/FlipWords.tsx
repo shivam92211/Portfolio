@@ -67,20 +67,22 @@ export const FlipWords = ({
           ),
           key: currentWord,
         },
-        currentWord.split(/(?<=\s)/).map((letter, index) => (
-          <motion.span
-            key={currentWord + index}
-            initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
-            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            transition={{
-              delay: index * 0.08,
-              duration: 1,
-            }}
-            className="inline-block mr-2"
-          >
-            {letter}
-          </motion.span>
-        ))
+        currentWord.split(/(?<=\s)/).map((letter, index) =>
+          React.createElement(
+            motion.span as any,
+            {
+              key: currentWord + index,
+              initial: { opacity: 0, y: 10, filter: "blur(8px)" },
+              animate: { opacity: 1, y: 0, filter: "blur(0px)" },
+              transition: {
+                delay: index * 0.08,
+                duration: 1,
+              },
+              className: "inline-block mr-2",
+            },
+            letter
+          )
+        )
       )}
     </AnimatePresence>
   );
