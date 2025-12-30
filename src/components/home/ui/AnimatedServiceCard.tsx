@@ -1,7 +1,7 @@
 "use client";
 
 import { animate, motion } from "framer-motion";
-import { useEffect, useState, useMemo } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { cn } from "@/utils/cn";
 import { IServiceItem } from "@/types";
 import Image from "next/image";
@@ -178,21 +178,21 @@ const Sparkles = () => {
 
   return (
     <div className="absolute inset-0">
-      {sparkles.map((sparkle, i) => (
-        <motion.span
-          key={`star-${i}`}
-          animate={{
+      {sparkles.map((sparkle, i) =>
+        React.createElement(motion.span as any, {
+          key: `star-${i}`,
+          animate: {
             top: `calc(${sparkle.animateTop}% + ${sparkle.moveY}px)`,
             left: `calc(${sparkle.animateLeft}% + ${sparkle.moveX}px)`,
             opacity: sparkle.opacity,
             scale: [1, 1.2, 0],
-          }}
-          transition={{
+          },
+          transition: {
             duration: sparkle.duration,
             repeat: Infinity,
             ease: "linear",
-          }}
-          style={{
+          },
+          style: {
             position: "absolute",
             top: `${sparkle.top}%`,
             left: `${sparkle.left}%`,
@@ -200,10 +200,10 @@ const Sparkles = () => {
             height: `2px`,
             borderRadius: "50%",
             zIndex: 1,
-          }}
-          className="inline-block bg-white"
-        ></motion.span>
-      ))}
+          },
+          className: "inline-block bg-white",
+        })
+      )}
     </div>
   );
 };
