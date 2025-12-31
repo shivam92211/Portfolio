@@ -28,7 +28,7 @@ const experiences: IExperienceItem[] = [
     ],
   },
   {
-    designation: "AI ML Engineer Intern",
+    designation: "AI ML Engineer",
     company: "Healtether Healthcare Services Pvt Ltd",
     startDate: "Feb 2023",
     endDate: "Mar 2024",
