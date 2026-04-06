@@ -1,6 +1,6 @@
 class Strings {
   static whatsapp = "Whatsapp";
-  static whatsappLink = "https://wa.me/+919137181416";
+  static whatsappLink = "https://wa.me/+918422092913";
   static whatsappUsername = "shivam";
 
   static github = "GitHub";
