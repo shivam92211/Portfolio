@@ -17,7 +17,7 @@ const experiences: IExperienceItem[] = [
   {
     designation: "AI ML Engineer",
     company: "Meta Scifor Technologies",
-    startDate: "Mar 2024",
+    startDate: "Mar 2023",
     endDate: "Apr 2025",
     isCurrentJob: false,
     location: "Bengaluru, India (Remote)",
@@ -30,8 +30,8 @@ const experiences: IExperienceItem[] = [
   {
     designation: "AI ML Engineer",
     company: "Healtether Healthcare Services Pvt Ltd",
-    startDate: "Feb 2023",
-    endDate: "Mar 2024",
+    startDate: "Feb 2021",
+    endDate: "Mar 2023",
     isCurrentJob: false,
     location: "Chennai, India (Remote)",
     description: [
@@ -40,20 +40,20 @@ const experiences: IExperienceItem[] = [
       "Applied AI image analysis effectively to solve complex problems, ensuring project success and reliability.",
     ],
   },
-  {
-    designation: "Math Expert",
-    company: "Photomath Inc",
-    startDate: "Nov 2021",
-    endDate: "Feb 2023",
-    isCurrentJob: false,
-    location: "Remote",
-    description: [
-      "Solved various math questions related to calculus, linear algebra, trigonometry, probability, and statistics",
-      "Improving problem solving skills by 25% over 3 months.",
-      "Cultivated strong communication abilities, conveying mathematical solutions clearly and concisely, with a 30% enhancement over 3 months.",
-      "Utilized LaTex to present solutions, increasing readability and professional presentation.",
-    ],
-  },
+  // {
+  //   designation: "Math Expert",
+  //   company: "Photomath Inc",
+  //   startDate: "Nov 2021",
+  //   endDate: "Feb 2023",
+  //   isCurrentJob: false,
+  //   location: "Remote",
+  //   description: [
+  //     "Solved various math questions related to calculus, linear algebra, trigonometry, probability, and statistics",
+  //     "Improving problem solving skills by 25% over 3 months.",
+  //     "Cultivated strong communication abilities, conveying mathematical solutions clearly and concisely, with a 30% enhancement over 3 months.",
+  //     "Utilized LaTex to present solutions, increasing readability and professional presentation.",
+  //   ],
+  // },
 ];
 
 export default experiences;
