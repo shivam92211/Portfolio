@@ -39,7 +39,7 @@ const HomeSection1 = ({ id }: Readonly<{ id: string }>) => {
             </div>
 
             <p className="mt-6 md:mt-0 md:max-w-xl text-sm/normal md:text-base/normal dark:text-[var(--textColorLight)] text-[var(--textColorLight)] text-center md:text-left">
-              AI/ML Engineer with 3+ years of experience in Machine Learning,
+              AI/ML Engineer with 5+ years of experience in Machine Learning,
               Web Development, and Applied AI. Skilled in designing and
               fine-tuning large language models (LLMs), developing
               Retrieval-Augmented Generation (RAG) systems, and creating
