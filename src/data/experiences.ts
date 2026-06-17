@@ -3,7 +3,7 @@ import { IExperienceItem } from "@/types";
 const experiences: IExperienceItem[] = [
   {
     designation: "AI ML Engineer",
-    company: "Aivision21",
+    company: "T&M AI and IT Solutions Pvt Ltd",
     startDate: "Apr 2025",
     endDate: "",
     isCurrentJob: true,
